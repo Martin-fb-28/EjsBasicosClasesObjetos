@@ -1,4 +1,25 @@
-package PACKAGE_NAME;
-
 public class Cancion {
+
+    private String titulo;
+    private String artista;
+    private int duracion_segundos;
+
+    public String getTitulo(){
+        return titulo;
+    }
+    public void setTitulo(String tituloCancion){
+        titulo = tituloCancion;
+    }
+    public String getArtista(){
+        return artista;
+    }
+    public void setArtista(String nameArtista){
+        artista = nameArtista;
+    }
+    public int getDuracionSegundos(){
+        return duracion_segundos;
+    }
+    public void setDuracionSegundos(int duracion_segundosCancion){
+        duracion_segundos = duracion_segundosCancion;
+    }
 }

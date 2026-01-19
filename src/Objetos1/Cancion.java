@@ -2,7 +2,7 @@ public class Cancion {
 
     private String titulo;
     private String artista;
-    private int duracion_segundos;
+    private int duracionSegundos;
 
     public String getTitulo(){
         return titulo;
@@ -17,9 +17,9 @@ public class Cancion {
         artista = nameArtista;
     }
     public int getDuracionSegundos(){
-        return duracion_segundos;
+        return duracionSegundos;
     }
-    public void setDuracionSegundos(int duracion_segundosCancion){
-        duracion_segundos = duracion_segundosCancion;
+    public void setDuracionSegundos(int duracionSegundosCancion){
+        duracionSegundos = duracionSegundosCancion;
     }
 }

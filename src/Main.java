@@ -1,9 +1,11 @@
+package Objetos1;
+
 public class Main{
     public static void main (String[] args){
 
         // Ejercicio1.
 
-        int TiempoCancion = 0;
+        int tiempoCancionMasLarga = 0;
         Cancion cancion1 = new Cancion();
         Cancion cancion2 = new Cancion();
 
@@ -11,17 +13,33 @@ public class Main{
         cancion2.setArtista("Juice WRLD") ;
         cancion1.setTitulo("Maze");
         cancion2.setTitulo("Cigarettes");
-        cancion1.setDuracionSegundos(2);
-        cancion2.setDuracionSegundos(4);
+        cancion1.setDuracionSegundos(144);
+        cancion2.setDuracionSegundos(227);
 
         System.out.println("El titulo de la primera canción es: " + cancion1.getTitulo());
         System.out.println("El titulo de la segunda canción es: " + cancion2.getTitulo());
         System.out.println("El artista que hizo las dos canciones es: " + cancion1.getArtista());
-        System.out.println("La duración de la primera canción es: " + cancion1.getDuracionSegundos() + " min");
-        System.out.println("La duración de la primera canción es: " + cancion2.getDuracionSegundos() + " min");
+        System.out.println("La duración de la primera canción es: " + cancion1.getDuracionSegundos() + " segundos");
+        System.out.println("La duración de la primera canción es: " + cancion2.getDuracionSegundos() + " segundos");
 
         cancion1.setTitulo("ZEZE");
         cancion1.setArtista("Kodak Black");
+
+        Cancion[] cancionesEscuchadas = new Cancion[2];
+
+        cancionesEscuchadas[0] = cancion1;
+        cancionesEscuchadas[1] = cancion2;
+
+        tiempoCancionMasLarga = cancion1.getDuracionSegundos();
+        int posicionMasLarga = 0;
+
+        for(int i = 0; i<cancionesEscuchadas.length; i++){
+            if(tiempoCancionMasLarga < cancionesEscuchadas[i].getDuracionSegundos()){
+                tiempoCancionMasLarga = cancionesEscuchadas[i].getDuracionSegundos();
+                posicionMasLarga = i;
+            }
+        }
+        System.out.println("\nLa canción más larga es: " + cancionesEscuchadas[posicionMasLarga].getTitulo());
 
         System.out.println("\n------------------------------");
 
@@ -38,7 +56,103 @@ public class Main{
 
         pelicula1.setDirector(pelicula1.getDirector().toUpperCase());
 
+        System.out.println("\n------------------------------");
+
         // Ejercicio 3.
+
+        Youtuber youtuber1 = new Youtuber();
+        Youtuber youtuber2 = new Youtuber();
+        Youtuber youtuber3 = new Youtuber();
+
+        youtuber1.setNombreCanal("ReudigRuediguer");
+        youtuber1.setNumeroSuscriptores(500000);
+
+        youtuber2.setNombreCanal("MenosTrece");
+        youtuber2.setNumeroSuscriptores(13000000);
+
+        youtuber3.setNombreCanal("Illojuan");
+        youtuber3.setNumeroSuscriptores(20000000);
+
+        System.out.println("El nombre del primer youtuber es: " + youtuber1.getNombreCanal() + " y tiene " + youtuber1.getNumeroSuscriptores() + " suscriptores");
+        System.out.println("el nombre del segundo youtuber es: " + youtuber2.getNombreCanal() + " y tiene " + youtuber2.getNumeroSuscriptores() + " suscriptores");
+        System.out.println("el nombre del segundo youtuber es: " + youtuber3.getNombreCanal() + " y tiene " + youtuber3.getNumeroSuscriptores() + " suscriptores");
+
+        youtuber1.setNumeroSuscriptores(535000);
+        youtuber2.setNumeroSuscriptores(13131313);
+        youtuber3.setNumeroSuscriptores(25000067);
+
+        // Ejercicio 4.
+
+        JugadorFutbol futbolista1 = new JugadorFutbol();
+
+        futbolista1.setNombre("Cristiano Ronaldo");
+        futbolista1.setEquipo("Sporting Clube de Portugal");
+        futbolista1.setDorsal(7);
+        futbolista1.setPosicion("Delantero");
+
+        System.out.println("\nEl futbolista se llama " + futbolista1.getNombre() + " jugó en varios equipos, pero empezó en el " + futbolista1.getEquipo() + ". Su dorsal es muy famoso, llegando al punto de ser legendario y es el número " + futbolista1.getDorsal() + ", juega de " + futbolista1.getPosicion() + ".");
+
+        futbolista1.setDorsal(999);
+        futbolista1.setEquipo("Al-Nssr");
+
+        System.out.println("\nEl futbolista se llama " + futbolista1.getNombre() + " jugó en varios equipos, pero empezó en el " + futbolista1.getEquipo() + ". Su dorsal es muy famoso, llegando al punto de ser legendario y es el número " + futbolista1.getDorsal() + ", juega de " + futbolista1.getPosicion() + ".");
+
+        // Ejercicio 5.
+
+        Skin skin1 = new Skin();
+        Skin skin2 = new Skin();
+
+        skin1.setNombreSkin("Vandal Primordium");
+        skin1.setVideojuego("Valorant");
+        skin1.setPrecio(2175);
+        skin1.setRareza("Exclusivo");
+
+        skin2.setNombreSkin("Vandal EX.0");
+        skin2.setVideojuego("Valorant");
+        skin2.setPrecio(2375);
+        skin2.setRareza("Exclusivo");
+
+        skin1.setPrecio(2975);
+        skin1.setRareza("Exótico");
+
+        // Ejercicio 6.
+
+        Pokemon pokemon1 = new Pokemon();
+
+        pokemon1.setNombre("Charizard");
+        pokemon1.setNivel(36);
+        pokemon1.setVida(120);
+        pokemon1.setTipo("Fuego");
+
+        // Ejercicio 7.
+
+        Manga manga1 = new Manga();
+
+        manga1.setTitulo("One Piece");
+        manga1.setAutor("Eiichiro Oda");
+        manga1.setNumero(105);
+        manga1.estaLeido(false);
+
+        System.out.println("El manga se llama " + manga1.getTitulo() + ", es el volumen " + manga1.getNumero() + " y fue escrito por " + manga1.getAutor());
+
+        manga1.estaLeido(true);
+
+        System.out.println("\n-----------------------------");
+
+        // Ejercicio 8.
+
+        EquipoEsports equipo1 = new EquipoEsports();
+
+        equipo1.setRanking(19);
+
+        // Objetos 2.
+
+
+
+
+
+
+
 
 
     }

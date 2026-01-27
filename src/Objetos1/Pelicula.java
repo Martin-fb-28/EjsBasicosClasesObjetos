@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Pelicula {
     private String titulo;
     private String director;

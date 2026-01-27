@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Cancion {
 
     private String titulo;
@@ -22,4 +24,5 @@ public class Cancion {
     public void setDuracionSegundos(int duracionSegundosCancion){
         duracionSegundos = duracionSegundosCancion;
     }
+
 }

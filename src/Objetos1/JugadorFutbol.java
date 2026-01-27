@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class JugadorFutbol {
     private String nombre;
     private String equipo;

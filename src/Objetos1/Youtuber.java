@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Youtuber {
     private String nombreCanal;
     private String categoria;

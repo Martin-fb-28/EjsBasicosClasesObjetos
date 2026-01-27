@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class EquipoEsports {
     private String nombre;
     private String juego;

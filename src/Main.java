@@ -1,7 +1,13 @@
-package Objetos1;
+import Objetos1.*;
+import Objetos2.BateriaMovil;
+import Objetos2.CancionStats;
+import Objetos2.Marcador;
+import Objetos2.Personaje;
 
-public class Main{
-    public static void main (String[] args){
+import java.text.spi.BreakIteratorProvider;
+
+public class Main {
+    public static void main(String[] args) {
 
         // Ejercicio1.
 
@@ -10,7 +16,7 @@ public class Main{
         Cancion cancion2 = new Cancion();
 
         cancion1.setArtista("Juice WRLD");
-        cancion2.setArtista("Juice WRLD") ;
+        cancion2.setArtista("Juice WRLD");
         cancion1.setTitulo("Maze");
         cancion2.setTitulo("Cigarettes");
         cancion1.setDuracionSegundos(144);
@@ -33,8 +39,8 @@ public class Main{
         tiempoCancionMasLarga = cancion1.getDuracionSegundos();
         int posicionMasLarga = 0;
 
-        for(int i = 0; i<cancionesEscuchadas.length; i++){
-            if(tiempoCancionMasLarga < cancionesEscuchadas[i].getDuracionSegundos()){
+        for (int i = 0; i < cancionesEscuchadas.length; i++) {
+            if (tiempoCancionMasLarga < cancionesEscuchadas[i].getDuracionSegundos()) {
                 tiempoCancionMasLarga = cancionesEscuchadas[i].getDuracionSegundos();
                 posicionMasLarga = i;
             }
@@ -147,12 +153,69 @@ public class Main{
 
         // Objetos 2.
 
+        // Ejercicio 9.
 
+        CancionStats cancionStat1 = new CancionStats("Already");
+        cancionStat1.reproducir();
 
+        System.out.println("La canción se llama " + cancionStat1.getTitulo());
 
+        // Ejercicio 10.
 
+        Marcador marcadorPartido = new Marcador();
 
+        marcadorPartido.setequipoLocal("Real Madrid");
+        marcadorPartido.setequipoVisitante("Barcelona");
 
+        System.out.println("Comienza el partido entre el " + marcadorPartido.getequipoLocal() + " y " + "el " + marcadorPartido.getequipoVisitante());
+
+        marcadorPartido.gollocal();
+
+        System.out.println("\nPrimeros minutos del partido y el Madrid marca su primer gol, " + marcadorPartido.resultado());
+
+        marcadorPartido.golvisitante();
+
+        System.out.println("\nEl barcelona ha marcado un golazo por la escuadra por parte de Lamine");
+
+        marcadorPartido.golvisitante();
+
+        System.out.println("\nHa habido un penalti que ha venido con un golazo de Lewandoski");
+
+        marcadorPartido.gollocal();
+
+        System.out.println("\nMbappe se acaba de llevar a tres y ha marcado un gol con una rasa interesante");
+
+        marcadorPartido.gollocal();
+
+        System.out.println("\nOtro gol de Arda Güler en el minuto 80 desde medio campo");
+
+        marcadorPartido.gollocal();
+
+        System.out.println("\n Se cierra este partido con un gol de Vinicius al límite de la portería!");
+
+        System.out.println("\nEl partido ha acabado, " + marcadorPartido.resultado());
+
+        // Ejercicio 11.
+
+        BateriaMovil porcentajeBateria = new BateriaMovil();
+
+        porcentajeBateria.setPorcentaje(85);
+
+        porcentajeBateria.usar(15);
+
+        System.out.println("\nLa batería se está agotando " + porcentajeBateria.getPorcentaje());
+
+        // Ejercicio 12.
+
+        Personaje personajePrincipal = new Personaje();
+
+        personajePrincipal.setNombre("Rocky");
+        personajePrincipal.setVida(100);
+        personajePrincipal.setAtaque(25);
+
+        personajePrincipal.recibirDanho(100);
+
+        System.out.println("Tu personaje: " + personajePrincipal.getNombre() + " ha recibido " +  );
 
 
     }

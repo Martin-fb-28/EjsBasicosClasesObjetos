@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Pokemon {
 
     private String nombre;

@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Manga {
 
     private String titulo;

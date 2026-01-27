@@ -1,3 +1,5 @@
+package Objetos1;
+
 public class Skin {
 
     private String nombre;
